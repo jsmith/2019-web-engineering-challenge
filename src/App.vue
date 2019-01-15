@@ -32,7 +32,7 @@
               :title="item.title"
               :body="item.body"
               favorited
-              @update:favorited="checkFavorite($event, item.id)"
+              @update:favorited="checkFavorite($event, item)"
             ></item>
           </div>
         </div>
