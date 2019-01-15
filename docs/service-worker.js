@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/2019-web-engineering-challenge/precache-manifest.cc1506721e20a6ded4597fb746a04480.js"
+  "/2019-web-engineering-challenge/precache-manifest.7f1169ccd39ffe497a03fa7d5e333abc.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "web-engineering-challenge"});

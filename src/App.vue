@@ -69,7 +69,7 @@ export default class App extends Vue {
   public searchText = '';
   public favorites: { [k: string]: RawItem } = {};
   public results: RawItem[] = [];
-  public raw: RawItem[] = JSON.parse(localStorage.getItem('raw') || '[]');
+  public raw: RawItem[] = [];
 
   get showFavorites() {
     return !!Object.keys(this.favorites).length;
@@ -107,7 +107,6 @@ export default class App extends Vue {
     http.onreadystatechange = () => {
       if (http.readyState === 4 && http.status === 200) {
         this.raw = JSON.parse(http.responseText) as RawItem[];
-        localStorage.setItem('raw', http.responseText);
         callback();
       }
     };
