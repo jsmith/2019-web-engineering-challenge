@@ -1,6 +1,6 @@
 <template>
-  <button class="search-button" @click="emit$('click', $event)">
-    <icon name="search" color="white"></icon>
+  <button class="search-button primary" @click="$emit('click', $event)">
+    <magnify class="icon" scale="1.5"></magnify>
   </button>
 </template>
 
@@ -15,9 +15,15 @@ export default class SearchButton extends Vue {}
 .search-button
   border: 1px solid #eee
   border-radius: 3px
-  background-color: #000
   cursor: pointer
-  font-size: 15pt
-  padding: 3px 10px
-  margin: 10px
+  font-size: 12pt
+  padding: 2px 5px
+
+.icon
+  color: white
+  transform: scaleX(-1)
+
+.icon, .icon /deep/ .material-design-icon__svg
+  height: 2.5em
+  width: 2.5em
 </style>
